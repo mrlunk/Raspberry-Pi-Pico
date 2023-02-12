@@ -1,4 +1,3 @@
-# WORK IN PROGRESS - Under Construction
 # Script by: Peter Lunk 
 
 """
