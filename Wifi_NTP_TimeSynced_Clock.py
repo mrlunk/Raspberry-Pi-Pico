@@ -32,8 +32,8 @@ WeekDagen = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
 
 TimeCheck = 300
 
-ssid = 'LunkTech3'
-password = 'DoeMijDieMaar'
+ssid = 'SSID'
+password = 'password'
 
 def connect_wifi():
     wlan = network.WLAN(network.STA_IF)
