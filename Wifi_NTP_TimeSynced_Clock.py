@@ -22,7 +22,6 @@ from machine import Pin
 
 led = Pin("LED", Pin.OUT)
 
-x = 1
 Hour = ""
 Minute = ""
 Seconds = ""
