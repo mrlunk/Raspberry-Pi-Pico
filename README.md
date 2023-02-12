@@ -1,7 +1,7 @@
 # Raspberry Pi Pico
  Some Pi pico scripts
 
-Wifi_NTP_TimeSynced_Clock.py 
+## Wifi_NTP_TimeSynced_Clock.py 
 
 This MicroPython script is for Raspberry Pi Pico W (Wifi) device
 that connects to a Wi-Fi network and synchronizes its time with 
