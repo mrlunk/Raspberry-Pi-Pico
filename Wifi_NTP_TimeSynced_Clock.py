@@ -1,3 +1,6 @@
+# WORK IN PROGRESS - nder Construction
+# Script by: Peter Lunk 
+
 import network
 import socket
 import time
