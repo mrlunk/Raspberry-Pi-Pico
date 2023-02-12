@@ -1,4 +1,4 @@
-# WORK IN PROGRESS - nder Construction
+# WORK IN PROGRESS - Under Construction
 # Script by: Peter Lunk 
 
 import network
