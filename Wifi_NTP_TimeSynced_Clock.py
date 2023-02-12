@@ -1,6 +1,9 @@
 # WORK IN PROGRESS - Under Construction
 # Script by: Peter Lunk 
 
+# WORK IN PROGRESS - Under Construction
+# Script by: Peter Lunk 
+
 import network
 import socket
 import time
@@ -79,3 +82,4 @@ while True:
                 print("")
                 print ("Time Synced at 00:00:00 ....")
                 print("")
+
