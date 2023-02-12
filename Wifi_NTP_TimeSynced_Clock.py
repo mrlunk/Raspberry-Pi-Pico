@@ -38,14 +38,17 @@ def connect_wifi():
         print('connected')
         status = wlan.ifconfig()
         print( 'ip = ' + status[0] )
+        
+def Wifi_time_sync():
+    wlan = network.WLAN(network.STA_IF)
+    Status = wlan.active()
+    print (Status)
+    print("_____________________________________________")
     
 #--------------------------------------------------------------------------------
 connect_wifi()
-
 ntptime.settime()
-
-Status = wlan.active()
-print (Status)
+Wifi_time_sync()
 
 while True:
     Year = time.localtime()[0]
@@ -60,7 +63,7 @@ while True:
     # ---- Print Date time info to Serial Monitor -------------------------------------
     print("Time: ",Hour,":",Minute,":",Second)
     print(WeekDagen[DayOTWeek],Maanden[Maand],Day,Year)
-    print("Day Nuber: ",DayNumber) 
+    print("Day of the year: ",DayNumber) 
     print("")
     time.sleep(1)
     
@@ -69,7 +72,7 @@ while True:
         if Minute == 0:
             if Second == 0:
                 print("")
-                ntptime.settime()
+                Wifi_time_sync()
                 print("")
                 print ("Time Synced at 00:00:00 ....")
                 print("")
