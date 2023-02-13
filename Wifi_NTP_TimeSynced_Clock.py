@@ -29,8 +29,8 @@ Seconds = ""
 Maanden = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Okt","Nov","Dec"]
 WeekDagen = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
 
-ssid = 'LunkTech3'
-password = 'DoeMijDieMaar'
+ssid = 'SSID'
+password = 'yourSSIDpassword'
 
 def connect_wifi():
     wlan = network.WLAN(network.STA_IF)
@@ -84,8 +84,8 @@ while True:
     time.sleep(1)
     
     # ---- Sync with NTP time server once per Day at Midnight:
-    if Hour == 11:
-        if Minute == 8:
+    if Hour == 0:
+        if Minute == 0:
             if Second == 0:
                 print("Before Sync: ",(time.localtime()))
                 Wifi_time_sync()
