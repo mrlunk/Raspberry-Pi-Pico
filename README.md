@@ -3,7 +3,19 @@
  
 ## DST_Daylight_Saving_Time_correction_example.py
 
+This code is written in MicroPython for the Raspberry Pi Pico, and its purpose is to correct the time for daylight saving time (DST).
 
+    The code starts by importing the time module.
+
+    Two functions, last_sunday_of_march(year) and last_sunday_of_oktober(year), are defined to calculate the last Sunday of March and October for a given year, respectively.
+
+    The current year is obtained using the time.localtime() function, and the dates for the last Sunday of March and October are calculated by calling the last_sunday_of_march() and last_sunday_of_oktober() functions.
+
+    The if statements then check if the current date is between the start date and end date of DST. If so, the DST_Adjustment is set to 1 hour. If the current date is not between the start and end date of DST, DST_Adjustment is set to 0.
+
+    The current time is obtained using time.localtime(), and the time tuple is converted to a list. The fourth element of the list (representing the hour) is then subtracted by DST_Adjustment (1 or 0) to correct for DST. The list is then converted back into a tuple, which is the final corrected time.
+
+    The final corrected time is then printed to the console.
  
 ## DateLastSundayInMarch.py
 
