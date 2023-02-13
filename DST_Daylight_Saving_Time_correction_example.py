@@ -37,6 +37,8 @@ current_time_list = list(current_time)
 
 # Subtract the DST adjustment from the current time
 current_time_list[3] -= DST_Adjustment
+if current_time_list[3] == -1:
+    current_time_list[3] == 23
 
 # Convert the modified time back to a tuple
 final_time = tuple(current_time_list)
