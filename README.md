@@ -5,17 +5,19 @@
 
 This code is written in MicroPython for the Raspberry Pi Pico, and its purpose is to correct the time for daylight saving time (DST).
 
-    The code starts by importing the time module.
+1. The code starts by importing the time module.
 
-    Two functions, last_sunday_of_march(year) and last_sunday_of_oktober(year), are defined to calculate the last Sunday of March and October for a given year, respectively.
+2. Two functions, last_sunday_of_march(year) and last_sunday_of_oktober(year), are defined to calculate the last Sunday of March and October for a given year, respectively.
 
-    The current year is obtained using the time.localtime() function, and the dates for the last Sunday of March and October are calculated by calling the last_sunday_of_march() and last_sunday_of_oktober() functions.
+3. The current year is obtained using the time.localtime() function, and the dates for the last Sunday of March and October are calculated by calling the last_sunday_of_march() and last_sunday_of_oktober() functions.
 
-    The if statements then check if the current date is between the start date and end date of DST. If so, the DST_Adjustment is set to 1 hour. If the current date is not between the start and end date of DST, DST_Adjustment is set to 0.
+4. The if statements then check if the current date is between the start date and end date of DST. If so, the DST_Adjustment is set to 1 hour. If the current date is not between the start and end date of DST, DST_Adjustment is set to 0.
 
-    The current time is obtained using time.localtime(), and the time tuple is converted to a list. The fourth element of the list (representing the hour) is then subtracted by DST_Adjustment (1 or 0) to correct for DST. The list is then converted back into a tuple, which is the final corrected time.
+5. The current time is obtained using time.localtime(), and the time tuple is converted to a list. The fourth element of the list (representing the hour) is then subtracted by DST_Adjustment (1 or 0) to correct for DST. The list is then converted back into a tuple, which is the final corrected time.
 
-    The final corrected time is then printed to the console.
+6. The final corrected time is then printed to the console.
+ 
+ 
  
 ## DateLastSundayInMarch.py
 
@@ -24,6 +26,8 @@ This is a Python script that calculates the date of the last Sunday of March in 
 The script first creates a timestamp t for March 31st of the given year using the mktime function from the time module. Then, it uses the localtime function to extract the day of the week (Sunday is represented by 6) from the timestamp. The script then subtracts the number of seconds corresponding to the number of days from March 31st to the last Sunday of March, and calculates the date using the localtime function again.
 
 Finally, the script prints the date of the last Sunday of March in the year obtained from the current local time using the strftime function.
+
+
 
 ## Wifi_NTP_TimeSynced_Clock.py 
 
