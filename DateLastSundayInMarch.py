@@ -1,5 +1,3 @@
-#UNDER CONSTRUCTION
-
 import time
 
 def last_sunday_of_march(year):
@@ -8,7 +6,7 @@ def last_sunday_of_march(year):
     # Use the localtime function to get the weekday of March 31st
     wday = time.localtime(t)[6]
     # Subtract the weekday from March 31st to get the timestamp for the last Sunday of March
-    t = t - (6 - wday) * 24 * 60 * 60
+    t = t - (wday + 1) * 24 * 60 * 60
     # Use the localtime function to get the date of the last Sunday of March
     date = time.localtime(t)[:3]
     return date
@@ -16,9 +14,13 @@ def last_sunday_of_march(year):
 # Get the current year
 year = time.localtime()[0]
 
+print(year)
+
 # Call the last_sunday_of_march function to get the date of the last Sunday of March of the current year
 date = last_sunday_of_march(year)
 
 # Print the date
 print("Last Sunday of March %d: %d-%02d-%02d" % (year, date[0], date[1], date[2]))
+
+
 
