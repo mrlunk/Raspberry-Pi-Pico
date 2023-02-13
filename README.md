@@ -3,25 +3,11 @@
  
 ## DateLastSundayInMarch.py
 
-This code defines a function last_sunday_of_march that takes a
-year as its input and returns the date of the last Sunday of 
-March for that year.
+This is a Python script that calculates the date of the last Sunday of March in a given year. The function last_sunday_of_march takes a year as an argument and returns a tuple of (year, month, day) for the date of the last Sunday of March.
 
-The function first calculates the timestamp for March 31st of
-the given year using the time.mktime function. Then, it uses
-the time.localtime function to get the weekday of March 31st.
+The script first creates a timestamp t for March 31st of the given year using the mktime function from the time module. Then, it uses the localtime function to extract the day of the week (Sunday is represented by 6) from the timestamp. The script then subtracts the number of seconds corresponding to the number of days from March 31st to the last Sunday of March, and calculates the date using the localtime function again.
 
-Next, it subtracts the weekday from March 31st to get the
-timestamp for the last Sunday of March, and again uses the
-time.localtime function to get the date of the last Sunday
-of March. Finally, it returns the date.
-
-The code then gets the current year using time.localtime and
-calls the last_sunday_of_march function to get the date of the
-last Sunday of March of the current year. The date is then 
-printed in the format "Last Sunday of March %d: %d-%02d-%02d", 
-where %d is replaced by the year and the date components (year,
-month, and day).
+Finally, the script prints the date of the last Sunday of March in the year obtained from the current local time using the strftime function.
 
 ## Wifi_NTP_TimeSynced_Clock.py 
 
