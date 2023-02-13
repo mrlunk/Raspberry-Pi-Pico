@@ -28,7 +28,7 @@ def last_sunday_of_oktober(year):
 
 # Get the current year
 year = time.localtime()[0]
-# Call the last_sunday_of_march function to get the date of the last Sunday of March of the current year
+# Call the last_sunday_of... functions
 DST_start_date = last_sunday_of_march(year)
 DST_end_date = last_sunday_of_oktober(year)
 
@@ -37,7 +37,6 @@ DST_end_date = last_sunday_of_oktober(year)
 # depending on the result substract an hour from the clock.
 
 Current_Date = date = time.localtime()[:3]
-# print("Current Date:",Current_Date)
 
 if Current_Date > DST_start_date:
     if Current_Date < DST_end_date:
@@ -48,8 +47,6 @@ if Current_Date < DST_start_date:
     
 if Current_Date > DST_end_date:
     DST_Adjustment = 0
-    
-print(DST_Adjustment)
 
 #---------------------------------------------------------------------
 # Time Tuple to list - subtract DST_Adjustment (1 or 0) from 4th value of tuple
@@ -62,5 +59,3 @@ Current_time_list[3]-=DST_Adjustment
 Final_time = tuple(Current_time_list)
 
 print(Final_time)
-
-
