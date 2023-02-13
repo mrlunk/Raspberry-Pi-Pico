@@ -1,12 +1,14 @@
 # Raspberry Pi Pico
  Some Pi pico MicroPython scripts...
 
-Hello welcome to this humble little corner of github I can call 'mine' :)
+Hello welcome to this humble little corner of github I can call 'mine'.
+
 I am learning MicroPython and making a script for a binary clock that runs fully automatic.
 1. clock should adjust for Daylight Savings Time when needed automatically.
 2. clock should sync with NTP time server over Wifi every day at midnight
 
 The files you encounter here are partial code / snippets of what needs to become the full script...
+
 This is the way I learn... part by part and combining later...
 
 Hope you enjoy some of my scripts.
