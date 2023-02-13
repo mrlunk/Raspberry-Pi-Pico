@@ -1,5 +1,5 @@
 # Raspberry Pi Pico
- Some Pi pico scripts
+ Some Pi picoMicroPython scripts...
  
 ## DateLastSundayInMarch.py
 
