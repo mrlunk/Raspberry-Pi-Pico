@@ -25,19 +25,27 @@ Peter Lunk
  
 ## DST_Daylight_Saving_Time_correction_example.py
 
-This code is written in MicroPython for the Raspberry Pi Pico, and its purpose is to correct the time for daylight saving time (DST).
+This script is a python script that calculates the final corrected time taking into account Daylight Saving Time (DST).
 
-1. The code starts by importing the time module.
+1. Importing the time module: The time module is imported to use the functions provided by it.
 
-2. Two functions, last_sunday_of_march(year) and last_sunday_of_oktober(year), are defined to calculate the last Sunday of March and October for a given year, respectively.
+2. Defining the last_sunday_of_month function: The function takes two arguments, year and month, and returns the date of the last Sunday of the given month and year.
 
-3. The current year is obtained using the time.localtime() function, and the dates for the last Sunday of March and October are calculated by calling the last_sunday_of_march() and last_sunday_of_oktober() functions.
+3. Calculating the last Sunday of March and October: This is done by calling the last_sunday_of_month function twice with the current year and months 3 and 10. The result is stored in the variables DST_start_date and DST_end_date.
 
-4. The if statements then check if the current date is between the start date and end date of DST. If so, the DST_Adjustment is set to 1 hour. If the current date is not between the start and end date of DST, DST_Adjustment is set to 0.
+4. Getting the current date: The current date is obtained using the localtime function of the time module and storing the first three elements of the result in the current_date variable.
 
-5. The current time is obtained using time.localtime(), and the time tuple is converted to a list. The fourth element of the list (representing the hour) is then subtracted by DST_Adjustment (1 or 0) to correct for DST. The list is then converted back into a tuple, which is the final corrected time.
+5. Calculating the DST adjustment: The script checks if the current date is between the last Sunday of March and the last Sunday of October. If it is, then the DST adjustment is set to 1 hour, otherwise, it is set to 0 hours.
 
-6. The final corrected time is then printed to the console.
+6. Getting the current time: The current time is obtained using the localtime function of the time module and stored in the current_time variable.
+
+7. Converting the current time to a list: The current time is converted to a list so that it can be modified.
+
+8. Subtracting the DST adjustment from the current time: The hour component of the current time is subtracted by the DST adjustment.
+
+9. Converting the modified time back to a tuple: The modified list is converted back to a tuple.
+
+10. Printing the final corrected time: The final corrected time is printed.
  
  
  
