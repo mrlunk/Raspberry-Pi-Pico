@@ -13,7 +13,6 @@ def last_sunday_of_march(year):
 
 # Get the current year
 year = time.localtime()[0]
-print(year)
 
 # Call the last_sunday_of_march function to get the date of the last Sunday of March of the current year
 date = last_sunday_of_march(year)
