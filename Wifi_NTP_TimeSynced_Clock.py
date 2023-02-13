@@ -22,16 +22,15 @@ from machine import Pin
 
 led = Pin("LED", Pin.OUT)
 
+x = 1
 Hour = ""
 Minute = ""
 Seconds = ""
 Maanden = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Okt","Nov","Dec"]
 WeekDagen = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
 
-TimeCheck = 300
-
-ssid = 'SSID'
-password = 'password'
+ssid = 'LunkTech3'
+password = 'DoeMijDieMaar'
 
 def connect_wifi():
     wlan = network.WLAN(network.STA_IF)
@@ -57,22 +56,25 @@ def Wifi_time_sync():
     wlan = network.WLAN(network.STA_IF)
     Status = wlan.active()
     print (Status)
+    ntptime.settime()
     print("_____________________________________________")
     
 #--------------------------------------------------------------------------------
 connect_wifi()
-ntptime.settime()
 Wifi_time_sync()
 
 while True:
     Year = time.localtime()[0]
     Maand = (time.localtime()[1])-1
     Day = time.localtime()[2]
-    Hour = time.localtime()[3]
+    Hour = time.localtime()[3]+1
     Minute = time.localtime()[4]
     Second = time.localtime()[5]
     DayOTWeek = (time.localtime()[6])
     DayNumber = time.localtime()[7]
+    
+    # Daylightsavings + or - hour auto adjustment.
+    #if Maand == 
     
     # ---- Print Date time info to Serial Monitor -------------------------------------
     print("Time: ",Hour,":",Minute,":",Second)
@@ -82,12 +84,10 @@ while True:
     time.sleep(1)
     
     # ---- Sync with NTP time server once per Day at Midnight:
-    if Hour == 0:
-        if Minute == 0:
+    if Hour == 11:
+        if Minute == 8:
             if Second == 0:
-                print("")
+                print("Before Sync: ",(time.localtime()))
                 Wifi_time_sync()
+                print("After Sync: ",(time.localtime()))
                 print("")
-                print ("Time Synced at 00:00:00 ....")
-                print("")
-
