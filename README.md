@@ -25,7 +25,7 @@ Peter Lunk
  
 ## DST_Daylight_Saving_Time_correction_example.py
 
-This script is a python script that calculates the final corrected time taking into account Daylight Saving Time (DST).
+This script is a python script that calculates the corrected current time taking into account Daylight Saving Time (DST).
 
 1. Importing the time module: The time module is imported to use the functions provided by it.
 
