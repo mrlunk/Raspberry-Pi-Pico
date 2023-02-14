@@ -2,8 +2,11 @@
 # The Clock automatically adjusts for Daylight Savings Time (DST) (AMS GMT).
 # A Raspberry Pi Pico script written in Micro Python by: MrLunk 
 
+# 24h Clock that Syncs with Network time server (NTP) every day at midnight (00:00:00) 
+# The Clock automatically adjusts for Daylight Savings Time (DST) (AMS GMT).
+# A Raspberry Pi Pico script written in Micro Python by: MrLunk 
+
 import network
-import socket
 import time
 import struct
 import ntptime
@@ -11,7 +14,6 @@ from machine import Pin
 
 led = Pin("LED", Pin.OUT)
 
-x = 1
 Hour = ""
 Minute = ""
 Seconds = ""
@@ -40,6 +42,7 @@ def connect_wifi():
         print('connected')
         status = wlan.ifconfig()
         print( 'ip = ' + status[0] )
+        print("___Time synced with NTP server______")
         
 def Wifi_time_sync():
     wlan = network.WLAN(network.STA_IF)
@@ -53,8 +56,15 @@ def last_sunday_of_month(year, month):
     date = time.localtime(t)[:3]
     return date
 
-connect_wifi()
-Wifi_time_sync()
+def Connect_and_sync():
+    wlan = network.WLAN(network.STA_IF)
+    connect_wifi()
+    Wifi_time_sync()
+    wlan.deinit()
+    
+#--------------------------------------------------------------------------------
+
+Connect_and_sync()
 
 while True:
     year = time.localtime()[0]
@@ -90,7 +100,9 @@ while True:
         if Minute == 0:
             if Second == 0:
                 print("Before Sync: ",(final_time))
-                Wifi_time_sync()
+                Connect_and_sync()
                 print("After Sync: ",(final_time))
                 print("")
+
+
 
