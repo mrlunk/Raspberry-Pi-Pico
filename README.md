@@ -22,6 +22,22 @@ Peter Lunk
 
 
 # Script descriptions
+
+## NTP_synced_24h_Clock_with_DST_correction.py
+
+This is a Raspberry pi Pico W Micro-Python script for a 24-hour clock that syncs with a network time server (NTP) every day at midnight (00:00:00). The clock also automatically adjusts for Daylight Saving Time (DST) in the Amsterdam (AMS) time zone.
+
+The script imports the required libraries, including network, time, struct, ntptime, and machine. It then sets up the LED pin, SSID, and password for the Wi-Fi network.
+
+The connect_wifi() function is defined to connect to the Wi-Fi network, while the Wifi_time_sync() function is used to sync the clock with the NTP server.
+
+The last_sunday_of_month() function is used to calculate the last Sunday of the month for DST adjustments.
+
+The Connect_and_sync() function is used to connect to the Wi-Fi network and sync the clock with the NTP server.
+
+The script uses an infinite loop to continuously display the time and date. The DST_Adjustment variable is used to adjust the time for DST, and the final_time variable is used to store the adjusted time.
+
+The Year, Month, Day, Hour, Minute, Second, DayOTWeek, and DayNumber variables are then used to display the time and date in the required format.
  
 ## DST_Daylight_Saving_Time_correction_example.py
 
