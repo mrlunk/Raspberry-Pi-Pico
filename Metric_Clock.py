@@ -1,7 +1,8 @@
 # project in development... Not ready.
 
-# Decimal Clock basics. (10 hour clock)
-# https://en.wikipedia.org/wiki/Decimal_time
+# Metric Clock basics. (10 hour clock)
+# https://en.wikipedia.org/wiki/Metric_time
+# Micropython Script for Raspberry Pi Pico
 
 import utime
 import time
