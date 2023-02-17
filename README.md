@@ -64,17 +64,6 @@ This script is a python script that calculates the corrected current time taking
 10. Printing the final corrected time: The final corrected time is printed.
  
  
- 
-## DateLastSundayInMarch.py
-
-This is a Python script that calculates the date of the last Sunday of March in a given year. The function last_sunday_of_march takes a year as an argument and returns a tuple of (year, month, day) for the date of the last Sunday of March.
-
-The script first creates a timestamp t for March 31st of the given year using the mktime function from the time module. Then, it uses the localtime function to extract the day of the week (Sunday is represented by 6) from the timestamp. The script then subtracts the number of seconds corresponding to the number of days from March 31st to the last Sunday of March, and calculates the date using the localtime function again.
-
-Finally, the script prints the date of the last Sunday of March in the year obtained from the current local time using the strftime function.
-
-
-
 ## Wifi_NTP_TimeSynced_Clock.py 
 
 This MicroPython script is for Raspberry Pi Pico W (Wifi) device
