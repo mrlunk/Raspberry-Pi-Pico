@@ -1,9 +1,17 @@
 """
-This is a Python script that calculates the number of degrees that the Earth has turned since midnight, and continuously prints the result along with the current timestamp.
+This is a Python script that calculates the number of degrees that the Earth
+has turned since midnight, and continuously prints the result along with the
+current timestamp.
 
-The script first sets the number of seconds per day and per degree, and then enters an infinite loop. Within the loop, it uses the time module to get the current time as a timestamp, calculates the number of seconds that have elapsed since midnight, and then converts that to the number of degrees that the Earth has turned by dividing by the number of seconds per degree.
+The script first sets the number of seconds per day and per degree, and then
+enters an infinite loop. Within the loop, it uses the time module to get the
+current time as a timestamp, calculates the number of seconds that have elapsed
+since midnight, and then converts that to the number of degrees that the Earth
+has turned by dividing by the number of seconds per degree.
 
-It then prints out the result along with the current timestamp using the print function, and then waits for one second using the time.sleep function before starting the loop again.
+It then prints out the result along with the current timestamp using the print
+function, and then waits for one second using the time.sleep function before 
+starting the loop again.
 """
 
 # A Micro Python Script for Raspberry Pi Pico by: MrLunk
