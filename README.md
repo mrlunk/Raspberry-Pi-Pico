@@ -88,6 +88,7 @@ The metric time is then broken down into metric hours, metric minutes, and metri
 
 The code then prints out both the metric time and regular time using the print() function. It also includes a 96ms delay using the utime.sleep_ms() function to make sure the code doesn't execute too quickly.
 
-Metric Time: https://en.wikipedia.org/wiki/Metric_time 
+Metric Time information: https://en.wikipedia.org/wiki/Metric_time 
+Metric time clock example: https://minkukel.com/en/clocks/metric-clock/ (not mine)
 
 By: MrLunk 2023
