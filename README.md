@@ -12,6 +12,7 @@ The files you encounter here are partial code / snippets of what needs to become
 This is the way I learn... part by part and combining later...
 
 Hope you enjoy some of my scripts.
+AND please let me know if you spot flaws errors or mistakes :)
 
 Be Well and Happy !
 
