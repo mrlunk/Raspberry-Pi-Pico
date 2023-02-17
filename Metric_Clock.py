@@ -1,11 +1,20 @@
 """
-This code converts regular time (in hours, minutes, and seconds) to metric time (in metric hours, metric minutes, and metric seconds). Metric time uses a base 10 system instead of the base 60 system used in regular time.
+This code converts regular time (in hours, minutes, and seconds) to metric time 
+(in metric hours, metric minutes, and metric seconds). Metric time uses a base 10
+system instead of the base 60 system used in regular time.
 
-The code first gets the number of seconds past midnight using the utime.time() function. It then calculates the decimal hours by dividing the number of seconds by 3600 (the number of seconds in an hour). It then converts decimal hours to metric time by multiplying by 100000 and dividing by 24. This gives us the number of metric seconds since midnight.
+The code first gets the number of seconds past midnight using the utime.time() 
+function. It then calculates the decimal hours by dividing the number of seconds 
+by 3600 (the number of seconds in an hour). It then converts decimal hours to metric 
+time by multiplying by 100000 and dividing by 24. This gives us the number of metric 
+seconds since midnight.
 
-The metric time is then broken down into metric hours, metric minutes, and metric seconds using integer division and modulus operations.
+The metric time is then broken down into metric hours, metric minutes, and metric 
+seconds using integer division and modulus operations.
 
-The code then prints out both the metric time and regular time using the print() function. It also includes a 96ms delay using the utime.sleep_ms() function to make sure the code doesn't execute too quickly.
+The code then prints out both the metric time and regular time using the print() 
+function. It also includes a 96ms delay using the utime.sleep_ms() function to 
+make sure the code doesn't execute too quickly.
 
 Metric Time information: https://en.wikipedia.org/wiki/Metric_time
 
