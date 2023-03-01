@@ -73,8 +73,6 @@ while True:
     DayOTWeek = (time.localtime()[6])
     DayNumber = time.localtime()[7]
     
-    # Daylightsavings + or - hour auto adjustment.
-    #if Maand == 
     
     # ---- Print Date time info to Serial Monitor -------------------------------------
     print("Time: ",Hour,":",Minute,":",Second)
