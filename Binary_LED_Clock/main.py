@@ -1,7 +1,11 @@
 """
 Rough basic but working code.
+
+Remove:
+- timecount and replace with real time.
+
 To be added:
-- NTP stimesync evvery 24 hours
+- NTP stimesync every 24 hours
 - Daylight savings time adjustment
 - Reset button
 - 12 / 24 hour clock switchable
