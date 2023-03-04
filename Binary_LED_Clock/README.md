@@ -12,6 +12,7 @@ To be added:
 - LED mode 'breathing' transitions (pulsating)
 - LED mode Steady light bright/medium/low
 - auto adjust brightness day/night (lightsensor ?)
+- external html website with info about the project hosted on the pico W too.
 - etc...
 - 
 Script by MrLunk 2023
