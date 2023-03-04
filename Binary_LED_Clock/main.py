@@ -76,5 +76,3 @@ def dispBinaryHr(nHr):
 
 while True:
     loop()
-
-
