@@ -1,12 +1,17 @@
 
 Rough basic but working code. UNDER DEVLOPMENT 3/3/2023
 
+NTP timesynced Binary LED clock
+Scipt in Micropython for Raspberry Pi Pico W.
+Script by: MrLunk
+Link: https://github.com/mrlunk/Raspberry-Pi-Pico/edit/main/Binary_LED_Clock/
+
 ![image](https://user-images.githubusercontent.com/25208554/222953650-ffcc8cbb-c6f3-461f-9d17-29f5336d6641.png)
 
 
 Remove:
-- timecount and replace with real time.
-- 
+
+
 To be added:
 - NTP stimesync every 24 hours
 - Daylight savings time adjustment
