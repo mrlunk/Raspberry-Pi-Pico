@@ -11,12 +11,12 @@ import time
 import ntptime
 import utime
 
-ledPinsSec = [2, 3, 4, 5, 6, 7]
-ledPinsMin = [8, 9, 10, 11, 12, 13]
-ledPinsHr = [14, 15, 16, 17, 18, 19]
+ledPinsSec = [0, 1, 2, 3, 4, 5]
+ledPinsMin = [6, 7, 8, 9, 10, 11]
+ledPinsHr = [12, 13, 14, 15, 16, 17]
 
-ssid = 'SSID'
-password = 'PASS'
+ssid = 'LunkTech3'
+password = 'DoeMijDieMaar'
 
 def connect_wifi():
     wlan = network.WLAN(network.STA_IF)
@@ -42,7 +42,7 @@ def Wifi_time_sync():
     time.sleep(5)
     wlan = network.WLAN(network.STA_IF)
     Status = wlan.active()
-    print (Status)
+    # print (Status)
     ntptime.settime()
     wlan.deinit()
 
@@ -79,11 +79,13 @@ def dispBinaryHr(nHr):
         machine.Pin(ledPinsHr[i], machine.Pin.OUT).value(nHr & 1)
         nHr >>= 1
         
+# ---------------------------------------------------------------------------
+        
 connect_wifi()
 Wifi_time_sync()
 
 while True:
-    countH = time.localtime()[3]+1
+    countH = time.localtime()[3]+1 # DST correction will be added later
     countM = time.localtime()[4]
     countS = time.localtime()[5]
     
@@ -92,6 +94,7 @@ while True:
     dispBinaryHr(countH)
     
     #---debug print time segments to console----------
-    #print(countH,countM,countS)
+    print(countH,countM,countS)
     
     utime.sleep(1)
+
