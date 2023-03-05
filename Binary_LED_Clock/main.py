@@ -4,6 +4,9 @@ import time
 import ntptime
 import utime
 
+ssid = 'LunkTech3'
+password = 'DoeMijDieMaar'
+
 ledPinsSec = [0, 1, 2, 3, 4, 5]
 ledPinsMin = [6, 7, 8, 9, 10, 11]
 ledPinsHr = [12, 13, 14, 15, 16, 17]
@@ -11,9 +14,6 @@ ledPinsHr = [12, 13, 14, 15, 16, 17]
 nBitsSec = len(ledPinsSec)
 nBitsMin = len(ledPinsMin)
 nBitsHr = len(ledPinsHr)
-
-ssid = 'LunkTech3'
-password = 'DoeMijDieMaar'
 
 for i in range(nBitsSec):
     pin = machine.Pin(ledPinsSec[i], machine.Pin.OUT)
