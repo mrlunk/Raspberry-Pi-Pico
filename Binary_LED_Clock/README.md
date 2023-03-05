@@ -1,5 +1,5 @@
 
-Rough basic but working code. UNDER DEVLOPMENT 3/3/2023
+Rough basic but working code. UNDER DEVLOPMENT 3/5/2023
 
 NTP timesynced Binary LED clock
 
