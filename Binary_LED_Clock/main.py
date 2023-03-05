@@ -8,9 +8,23 @@ ledPinsSec = [0, 1, 2, 3, 4, 5]
 ledPinsMin = [6, 7, 8, 9, 10, 11]
 ledPinsHr = [12, 13, 14, 15, 16, 17]
 
+nBitsSec = len(ledPinsSec)
+nBitsMin = len(ledPinsMin)
+nBitsHr = len(ledPinsHr)
+
 ssid = 'LunkTech3'
 password = 'DoeMijDieMaar'
 
+for i in range(nBitsSec):
+    pin = machine.Pin(ledPinsSec[i], machine.Pin.OUT)
+
+for i in range(nBitsMin):
+    pin = machine.Pin(ledPinsMin[i], machine.Pin.OUT)
+
+for i in range(nBitsHr):
+    pin = machine.Pin(ledPinsHr[i], machine.Pin.OUT)
+
+#-----------------------------------------------------------
 def connect_wifi():
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
@@ -38,21 +52,7 @@ def Wifi_time_sync():
     ntptime.settime()
     wlan.deinit()
 
-nBitsSec = len(ledPinsSec)
-nBitsMin = len(ledPinsMin)
-nBitsHr = len(ledPinsHr)
-
-for i in range(nBitsSec):
-    pin = machine.Pin(ledPinsSec[i], machine.Pin.OUT)
-
-for i in range(nBitsMin):
-    pin = machine.Pin(ledPinsMin[i], machine.Pin.OUT)
-
-for i in range(nBitsHr):
-    pin = machine.Pin(ledPinsHr[i], machine.Pin.OUT)
-
 #-----------------------------------------------------------
-
 def dispBinarySec(nSec):
     global ledPinsSec, nBitsSec
     for i in range(nBitsSec):
@@ -72,7 +72,6 @@ def dispBinaryHr(nHr):
         nHr >>= 1
         
 # ---------------------------------------------------------------------------
-        
 connect_wifi()
 Wifi_time_sync()
 
