@@ -1,10 +1,3 @@
-"""
-Rough basic but working code. UNDER DEV.
-
-Script by MrLunk 2023
-https://github.com/mrlunk/Raspberry-Pi-Pico/blob/main/Binary_LED_Clock/
-"""
-
 import machine
 import network
 import time
@@ -15,8 +8,8 @@ ledPinsSec = [0, 1, 2, 3, 4, 5]
 ledPinsMin = [6, 7, 8, 9, 10, 11]
 ledPinsHr = [12, 13, 14, 15, 16, 17]
 
-ssid = 'LunkTech3'
-password = 'DoeMijDieMaar'
+ssid = 'SSID'
+password = 'PASSWORD'
 
 def connect_wifi():
     wlan = network.WLAN(network.STA_IF)
@@ -39,7 +32,6 @@ def connect_wifi():
         print( 'ip = ' + status[0] )
         
 def Wifi_time_sync():
-    time.sleep(5)
     wlan = network.WLAN(network.STA_IF)
     Status = wlan.active()
     # print (Status)
@@ -85,11 +77,27 @@ connect_wifi()
 Wifi_time_sync()
 
 while True:
-    dispBinarySec(time.localtime()[3]+1)
-    dispBinaryMin(time.localtime()[4])
-    dispBinaryHr(time.localtime()[5])
+    countH = time.localtime()[3]+1 # DST correction will be added later
+    countM = time.localtime()[4]
+    countS = time.localtime()[5]
+    
+    dispBinarySec(countS)
+    dispBinaryMin(countM)
+    dispBinaryHr(countH)
+    
+    # ----- repeat NTP time synchronisation every day at midnight ---
+    
+    if countH == 0:
+        if countM == 0:
+            if countS == 0:
+                print("Before Sync: ",(time.localtime()))
+                connect_wifi()
+                Wifi_time_sync()
+                print("After Sync: ",(time.localtime()))
+                print("")
+    
     
     #---debug print time segments to console----------
-    print((time.localtime()[3]+1),(time.localtime()[4]),(time.localtime()[5]))
+    print(countH,countM,countS)
     
     utime.sleep(1)
