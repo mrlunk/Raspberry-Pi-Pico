@@ -15,8 +15,8 @@ ledPinsSec = [2, 3, 4, 5, 6, 7]
 ledPinsMin = [8, 9, 10, 11, 12, 13]
 ledPinsHr = [14, 15, 16, 17, 18, 19]
 
-ssid = 'LunkTech3'
-password = 'DoeMijDieMaar'
+ssid = 'SSID'
+password = 'PASS'
 
 def connect_wifi():
     wlan = network.WLAN(network.STA_IF)
