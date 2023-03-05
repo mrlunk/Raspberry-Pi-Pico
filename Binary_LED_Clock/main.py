@@ -85,16 +85,11 @@ connect_wifi()
 Wifi_time_sync()
 
 while True:
-    countH = time.localtime()[3]+1 # DST correction will be added later
-    countM = time.localtime()[4]
-    countS = time.localtime()[5]
-    
-    dispBinarySec(countS)
-    dispBinaryMin(countM)
-    dispBinaryHr(countH)
+    dispBinarySec(time.localtime()[3]+1)
+    dispBinaryMin(time.localtime()[4])
+    dispBinaryHr(time.localtime()[5])
     
     #---debug print time segments to console----------
-    print(countH,countM,countS)
+    print((time.localtime()[3]+1),(time.localtime()[4]),(time.localtime()[5]))
     
     utime.sleep(1)
-
