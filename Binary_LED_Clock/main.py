@@ -2,7 +2,7 @@
 Rough basic but working code. UNDER DEV.
 
 Script by MrLunk 2023
-https://github.com/mrlunk
+https://github.com/mrlunk/Raspberry-Pi-Pico/blob/main/Binary_LED_Clock/
 """
 
 import machine
