@@ -1,6 +1,8 @@
 
 Rough basic but working code. UNDER DEVLOPMENT 3/3/2023
 
+![](https://imgur.com/a/UquUf9d)
+
 Remove:
 - timecount and replace with real time.
 - 
