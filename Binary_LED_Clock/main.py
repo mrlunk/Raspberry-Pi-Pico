@@ -8,8 +8,8 @@ ledPinsSec = [0, 1, 2, 3, 4, 5]
 ledPinsMin = [6, 7, 8, 9, 10, 11]
 ledPinsHr = [12, 13, 14, 15, 16, 17]
 
-ssid = 'SSID'
-password = 'PASSWORD'
+ssid = 'LunkTech3'
+password = 'DoeMijDieMaar'
 
 def connect_wifi():
     wlan = network.WLAN(network.STA_IF)
@@ -33,7 +33,7 @@ def connect_wifi():
         
 def Wifi_time_sync():
     wlan = network.WLAN(network.STA_IF)
-    Status = wlan.active()
+    # Status = wlan.active()
     # print (Status)
     ntptime.settime()
     wlan.deinit()
@@ -86,19 +86,11 @@ while True:
     dispBinaryHr(countH)
     
     # ----- repeat NTP time synchronisation every day at midnight ---
-    
-    if countH == 0:
-        if countM == 0:
-            if countS == 0:
-                print("Before Sync: ",(time.localtime()))
-                connect_wifi()
-                Wifi_time_sync()
-                print("After Sync: ",(time.localtime()))
-                print("")
-    
+    if countH == 0 and countM == 0 and countS == 0:
+        connect_wifi()
+        Wifi_time_sync()
     
     #---debug print time segments to console----------
     print(countH,countM,countS)
     
     utime.sleep(1)
-
