@@ -7,15 +7,6 @@ Script by: MrLunk
 https://github.com/mrlunk/Raspberry-Pi-Pico/
 """
 
-"""
-This code defines a button press handler function that detects when a button connected
-to pin 27 is pressed and prevents double-clicks by ignoring button presses that occur
-within 500 milliseconds of the last press.
-
-Script by: MrLunk
-https://github.com/mrlunk/Raspberry-Pi-Pico/
-"""
-
 import machine
 import time
 
