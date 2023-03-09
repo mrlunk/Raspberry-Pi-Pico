@@ -4,8 +4,8 @@ import time
 import ntptime
 import utime
 
-ssid = 'LunkTech3'
-password = 'DoeMijDieMaar'
+ssid = 'SSID'
+password = 'PASSWORD'
 
 ledPinsSec = [0, 1, 2, 3, 4, 5]
 ledPinsMin = [6, 7, 8, 9, 10, 11]
