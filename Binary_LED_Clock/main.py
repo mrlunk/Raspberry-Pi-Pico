@@ -4,8 +4,8 @@ import time
 import ntptime
 import utime
 
-ssid = 'SSID'
-password = 'PASSWORD'
+ssid = 'LunkTech3'
+password = 'DoeMijDieMaar'
 
 ledPinsSec = [0, 1, 2, 3, 4, 5]
 ledPinsMin = [6, 7, 8, 9, 10, 11]
@@ -16,7 +16,8 @@ nBitsMin = len(ledPinsMin)
 nBitsHr = len(ledPinsHr)
     
 for pin in ledPinsSec + ledPinsMin + ledPinsHr:
-    machine.Pin(pin, machine.Pin.OUT)
+    p = machine.Pin(pin, machine.Pin.OUT)
+    p.low()
 
 #-----------------------------------------------------------
 def connect_wifi():
@@ -87,3 +88,4 @@ while True:
     print(countH,countM,countS)
     
     utime.sleep(1)
+
